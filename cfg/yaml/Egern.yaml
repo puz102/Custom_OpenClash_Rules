@@ -120,11 +120,20 @@ policy_groups:
       update_interval: 86400
       hidden: true
 
+  # 📱 App 内手动添加的节点会自动归入此组（由文件末尾 default_proxy_group 指定）
+  # 在 App 里随时增删节点，无需再改配置文件
+  - select:
+      name: 📱 手动添加节点
+      icon: iphone
+      policies:
+        - 自动选择
+
   - smart:
       name: 自动选择
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
       policies:
         - 节点订阅
+        - 📱 手动添加节点
       flatten: true
       interval: 300
       tolerance: 50
@@ -135,6 +144,7 @@ policy_groups:
       icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
       policies:
         - 自动选择
+        - 📱 手动添加节点
         - 🇭🇰 香港节点
         - 🇺🇸 美国节点
         - 🇯🇵 日本节点
@@ -1018,6 +1028,7 @@ policy_groups:
         - 全球直连
         - 手动选择
         - 自动选择
+        - 📱 手动添加节点
         - 🇭🇰 香港节点
         - 🇺🇸 美国节点
         - 🇯🇵 日本节点
@@ -1647,4 +1658,4 @@ widgets:
   script_name: 测试网络下载速度小组件
 
 default_subscription_group: 节点订阅
-default_proxy_group: 漏网之鱼
+default_proxy_group: 📱 手动添加节点
