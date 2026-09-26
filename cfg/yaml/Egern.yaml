@@ -124,7 +124,7 @@ policy_groups:
   # 在 App 里随时增删节点，无需再改配置文件
   - select:
       name: 📱 手动添加节点
-      icon: iphone
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
       policies:
         - 自动选择
 
